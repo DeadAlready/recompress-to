@@ -1,0 +1,8 @@
+{
+  "gzip": "/usr/bin/gzip",
+  "tar": "/usr/bin/tar",
+  "unzip": "/usr/bin/unzip",
+  "xz": "/usr/local/bin/xz",
+  "unrar": "/usr/local/bin/unrar",
+  "shasum": "/usr/bin/shasum"
+}
