@@ -15,8 +15,12 @@ let start = Date.now();
 let total = File
     .recursiveRead(folder)
     .filter(file => regex.test(file))
-    .map(XZ.toXz)
-    .reduce((sum, el) => sum + el);
+    .reduce((sum, el) => {
+        let reduce = XZ.toXz(el);
+        let totalSoFar = sum + reduce;
+        console.log('Saved so far:', pretty(totalSoFar));
+        return totalSoFar;
+    }, 0);
 
 console.log('Time taken:', prettyMs(Date.now() - start));
 console.log('Total saved:', pretty(total));
